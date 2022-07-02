@@ -8,6 +8,8 @@
 #     b = color.rgb.b
 #     new_color = (r, g, b)
 #     rgb_colors.append(new_color)
+
+"""this program makes a hirst 10x10 painting using Turtle"""
 import turtle as t
 import random
 
@@ -20,7 +22,7 @@ color_list = [(254, 253, 252), (232, 254, 243), (253, 234, 245), (43, 2, 176), (
 t.colormode(255)
 ani = t.Turtle()
 
-
+"""my trutle goes to a spot on the window that will allow its final image to be accommodated on the display screen"""
 def find_space():
     ani.setheading(225)
     ani.penup()
@@ -36,7 +38,7 @@ def movement(steps):
         ani.pendown()
         ani.dot(20, random.choice(color_list))
 
-
+"""this function lets lets the arrow rotate anticlockwise and draw the dots on the line above"""
 def left_rotation():
     ani.left(90)
     ani.penup()
@@ -48,8 +50,9 @@ def left_rotation():
     ani.forward(50)
     ani.pendown()
     ani.dot(10, random.choice(color_list))
+    
 
-
+  """this function lets lets the arrow rotate clockwise and draw the dots on the line above"""  
 def right_rotation():
     ani.right(90)
     ani.penup()
@@ -63,9 +66,9 @@ def right_rotation():
     ani.dot(20, random.choice(color_list))
 
 
-ani.hideturtle()
+ani.hideturtle() #this makes the turtle invisible
 find_space()
-ani.speed("fastest")
+ani.speed("fastest") #makes the speed of painting run at its fastest
 movement(9)
 for i in range(5):
     left_rotation()
