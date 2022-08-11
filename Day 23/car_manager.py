@@ -13,6 +13,7 @@ class CarManager:
         self.car_speed = STARTING_MOVE_DISTANCE
 
     def create_car(self):
+        #this helped to control the amount of cars that were being displayed
         random_chance = random.randint(1, 6)
         if random_chance == 1:
             new_car = Turtle("square")
@@ -27,6 +28,7 @@ class CarManager:
         for car in self.all_cars:
             car.backward(STARTING_MOVE_DISTANCE)
 
+    #this function, when called, increases the speed of the cars every time the player sucessfully crosses to the other side
     def level_up(self):
         self.car_speed += MOVE_INCREMENT
 
