@@ -1,47 +1,49 @@
-# with open("weather_data.csv") as weather_data:
-#     data = weather_data.readlines()
-#     print(data)
 
-# import csv
-#
-# with open("weather_data.csv") as weather_data:
-#     # reader() can read a csv file and output the data
-#     data = csv.reader(weather_data)
-#     temperatures = []
-#     for row in data:
-#         if row[1] != "temp":
-#             temperatures.append(int(row[1]))
-#     print(temperatures)
-# series is the column of data and the entire table is a data frame
+''' 
+with open("weather_data.csv") as weather_data:
+     data = weather_data.readlines()
+     print(data)
+
+ import csv
+
+ with open("weather_data.csv") as weather_data:
+     # reader() can read a csv file and output the data
+     data = csv.reader(weather_data)
+     temperatures = []
+     for row in data:
+         if row[1] != "temp":
+             temperatures.append(int(row[1]))
+     print(temperatures)
+ series is the column of data and the entire table is a data frame
 import pandas
 
 data = pandas.read_csv("weather_data.csv")
-# print(data)
+ print(data)
 
-# data_dict = data.to_dict()
-# print(data_dict)
+ data_dict = data.to_dict()
+ print(data_dict)
 
-# temp_list = data["temp"].to_list()
-# data["temp"] and data.temp are the same thing.
-# the initial treats it like a dictionary, while the later like an attribute
+ temp_list = data["temp"].to_list()
+ data["temp"] and data.temp are the same thing.
+ the initial treats it like a dictionary, while the later like an attribute
 
-# Get data in columns
-# print(data["temp"])
-# print(data.temp)
+ Get data in columns
+ print(data["temp"])
+ print(data.temp)
 
-# Get data in rows
-# print(data[data.day == "Monday"])
+ Get data in rows
+ print(data[data.day == "Monday"])
 
-# Printing the row with the highest temperature
-# hottest = data.temp.max()
-# print(data[data.temp == hottest])
+ Printing the row with the highest temperature
+ hottest = data.temp.max()
+ print(data[data.temp == hottest])
 
-# Converting Mondsy's temperature to Farenheit
-# monday = data[data.day == "Monday"]
-# new_temp = ((int(monday.temp)*1.8) + 32)
-# print(new_temp)
+Converting Mondsy's temperature to Farenheit
+monday = data[data.day == "Monday"]
+new_temp = ((int(monday.temp)*1.8) + 32)
+print(new_temp)
 
-# Creating a data frame from scratch
+Creating a data frame from scratch
 data_dict = {
     "students": ["Amy", "James", "Angela"],
     "scores": [76, 56, 65]
@@ -49,3 +51,4 @@ data_dict = {
 data = pandas.DataFrame(data_dict)
 data.to_csv("new_data.csv")
 
+'''
