@@ -1,4 +1,5 @@
 # you can put in as many parameters as you want. 
+# args has has a data type of tuple
 def add(*args):
     sum = 0
     for n in args:
@@ -7,7 +8,7 @@ def add(*args):
 
 print (add(3, 4, 5, 6, 7))
 
-# *kwargs is treated as a dictionary in type. 
+# *kwargs has data typee dictionary. 
 # it takes in positional parameters. 
 def calculate(n, **kwargs):
     print(kwargs)
