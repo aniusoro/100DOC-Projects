@@ -1,0 +1,4 @@
+try: this is trying something that may cause an exception
+except: do this if there was an exception
+else: do this if there were no exceptions
+finally: do this no matter what happens
