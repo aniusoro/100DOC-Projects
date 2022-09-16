@@ -1,4 +1,6 @@
-""" this program sends my phone number a textmessage when the weather is cloudy"""
+""" this program sends my phone number a textmessage when the weather is cloudy
+    using twilio
+"""
 
 import requests
 from twilio.rest import Client
